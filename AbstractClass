@@ -1,0 +1,35 @@
+package com.mycompany.classabstract;
+
+import java.util.Scanner;
+
+
+public class ClassAbstract {
+
+    public static void main(String[] args) {
+        
+        Scanner keyboardString = new Scanner(System.in);
+        
+        
+        System.out.println("What figure do you prefer to calculate");
+        String figura = keyboardString.nextLine();
+
+        switch(figura){
+        case  "Circle": 
+            Circle Kreis = new Circle();
+            System.out.println("Kreis Area is: " + Kreis.toCalculateArea());
+        break;
+        case "Square": 
+             Square vierKant = new Square();
+            System.out.println("vierKant Area is " + vierKant.toCalculateArea());
+        break;
+        case "Triangle":
+             Triangle Dreieck = new Triangle();
+            System.out.println("Dreieck Area is: " + Dreieck.toCalculateArea());
+        break;
+        default : System.out.println("insert a valid figure");
+        break;
+    }
+        
+       
+    }
+}
